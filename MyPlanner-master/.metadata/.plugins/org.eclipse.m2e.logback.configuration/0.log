@@ -1,0 +1,58 @@
+2019-02-28 21:50:47,629 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-02-28 21:51:07,224 [Worker-12: Building workspace] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SoftwareMasters:BusinessPlanner:0.0.1-SNAPSHOT @ /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/pom.xml.
+2019-02-28 21:51:07,792 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:07,793 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-02-28 21:51:07,795 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:07,795 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-02-28 21:51:08,833 [Worker-2: Updating Maven Dependencies] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: SoftwareMasters:BusinessPlanner:0.0.1-SNAPSHOT @ /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/pom.xml.
+2019-02-28 21:51:09,489 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:09,490 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-02-28 21:51:09,491 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:09,491 [Worker-12: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-02-28 21:51:25,523 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:25,524 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-02-28 21:51:25,525 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-02-28 21:51:25,525 [Worker-10: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-03 20:30:10,805 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-03-03 20:31:03,651 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-03 20:31:03,653 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-03 20:31:03,655 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-03 20:31:03,655 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-07 21:24:58,115 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-03-10 21:19:17,296 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-03-10 21:20:05,710 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:20:05,711 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:20:05,713 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:20:05,713 [Worker-2: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 21:25:28,676 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:25:28,677 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:25:28,678 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:25:28,678 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 21:33:47,849 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:33:47,851 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:33:47,854 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:33:47,854 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 21:46:08,704 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:46:08,704 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:46:08,705 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:46:08,706 [Worker-0: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 21:46:40,194 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:46:40,194 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:46:40,195 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:46:40,196 [Worker-8: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 21:47:25,232 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:47:25,233 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 21:47:25,235 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 21:47:25,235 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 22:13:41,373 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:41,374 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 22:13:41,375 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:41,375 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 22:13:42,995 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:42,996 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 22:13:42,999 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:42,999 [Worker-1: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
+2019-03-10 22:13:44,081 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:44,081 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/main/resources
+2019-03-10 22:13:44,082 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2019-03-10 22:13:44,083 [Worker-16: Building workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/john.dyar/eclipse-workspace/MyPlanner-master/BusinessPlanner/src/test/resources
