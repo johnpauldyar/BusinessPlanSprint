@@ -45,7 +45,6 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	}
 	
 	private ArrayList<Account> userList;
-	private ArrayList<Department> deptList;
 	
 	
 	/**
@@ -92,16 +91,37 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		temps.set(index, newTemp);
 	}
 	
-	public void makePlan()
+	public void makePlan(String templateName,Account myAccount)
 	{
 		Calendar cal=Calendar.getInstance();
 		cal.setTime(new Date());
 		int year=cal.get(Calendar.DAY_OF_YEAR);
-		makePlan(year);
+		makePlan(year, templateName, myAccount);
 	}
 	
-	public void makePlan(int year)
+	public void makePlan(int year, String templateName, Account myAccount)
 	{
-		
+		Template model=myAccount.getDept().getModel();
+		TemplateSection root=model.getRoot().deepCopy();
+		Template newTemp=new Template(model.getDeveloperTemplateName(), templateName, root, year, true);
+		myAccount.getDept().addNewTemplate(newTemp);
+	}
+	
+	public void addAccount(Account admin, String name, String password, boolean isAdmin)
+	{
+		if(admin.isAdmin())
+		{
+			Department dept=admin.getDept();
+			Account acc=new Account(name, password, dept, isAdmin);
+			userList.add(acc);
+		}
+	}
+	
+	public void changeEditable(Template temp, boolean edit, Account admin)
+	{
+		if(admin.isAdmin())
+		{
+			temp.setEditable(edit);
+		}
 	}
 }

@@ -35,7 +35,7 @@ public class Account {
 	/**
 	 * @return admin boolean
 	 */
-	public boolean isbAdmin() {
+	public boolean isAdmin() {
 		return bAdmin;
 	}
 

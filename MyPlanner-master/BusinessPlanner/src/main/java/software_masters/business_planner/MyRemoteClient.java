@@ -13,7 +13,7 @@ public class MyRemoteClient {
 		try
 		{
 			System.out.println("hello");
-			Registry registry = LocateRegistry.getRegistry("CS-UNICORN");
+			Registry registry = LocateRegistry.getRegistry("127.0.0.1");
 			MyRemote stub = (MyRemote) registry.lookup("RemoteHello");
 			
 			String s = stub.sayHello();
