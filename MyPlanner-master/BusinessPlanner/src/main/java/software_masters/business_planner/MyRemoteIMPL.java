@@ -7,6 +7,10 @@ import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
+/**
+ * @author john.dyar
+ *
+ */
 public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote 
 {
 
@@ -23,8 +27,6 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	
 	public String sayHello() throws RemoteException
 	{
-
-		
 		return "hello";
 	}
 	
@@ -44,9 +46,17 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		}
 	}
 	
-	private ArrayList<Account> userList;
+	private ArrayList<Account> accountList;
 	
 	
+	public ArrayList<Account> getAccountList() {
+		return accountList;
+	}
+
+	public void setAccountList(ArrayList<Account> accountList) {
+		this.accountList = accountList;
+	}
+
 	/**
 	 * @param year
 	 * @param myAccount
@@ -70,7 +80,9 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 * @param newTemp
 	 * @param year
 	 * @param myAccount
-	 * @throws IllegalArgumentException if there doesn't exist a template with that year
+	 * @throws IllegalArgumentException 
+	 * 
+	 * if there doesn't exist a template with that year
 	 * replaces the plan with given year in the given user's department to a new, given plan
 	 */
 	public void replacePlan(Template newTemp, int year, Account myAccount) throws IllegalArgumentException
@@ -88,9 +100,24 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		{
 			throw new IllegalArgumentException("Template with year not on record.");
 		}
-		temps.set(index, newTemp);
+		if (temps.get(index).isEditable())
+		{
+			temps.set(index, newTemp);
+		}
+		else
+		{
+			throw new IllegalArgumentException("This plan is not editable.");
+		}
+
 	}
 	
+	
+	/**
+	 * @param String templateName
+	 * @param Account myAccount 
+	 * 
+	 * Creates an new plan with the current year as the default
+	 */
 	public void makePlan(String templateName,Account myAccount)
 	{
 		Calendar cal=Calendar.getInstance();
@@ -99,6 +126,13 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		makePlan(year, templateName, myAccount);
 	}
 	
+	/**
+	 * @param int year
+	 * @param String templateName
+	 * @param Account myAccount
+	 * 
+	 * Creates a new plan with the given year
+	 */
 	public void makePlan(int year, String templateName, Account myAccount)
 	{
 		Template model=myAccount.getDept().getModel();
@@ -107,7 +141,16 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		myAccount.getDept().addNewTemplate(newTemp);
 	}
 	
-	public void addAccount(Account admin, String name, String password, boolean isAdmin)
+	/**
+	 * @param Account admin
+	 * @param String name
+	 * @param String password
+	 * @param boolean isAdmin
+	 * @throws IllegalArgumentException
+	 * 
+	 * adds a new account in the department of the administrator adding the account
+	 */
+	public void addAccount(Account admin, String name, String password, boolean isAdmin) throws IllegalArgumentException
 	{
 		if(admin.isAdmin())
 		{
@@ -115,13 +158,32 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			Account acc=new Account(name, password, dept, isAdmin);
 			userList.add(acc);
 		}
+		else
+		{
+			throw new IllegalArgumentException("You are not an Administrator");
+			
+		}
 	}
 	
-	public void changeEditable(Template temp, boolean edit, Account admin)
+	/**
+	 * @param Template temp
+	 * @param boolean edit
+	 * @param Account admin
+	 * @throws IllegalArgumentException
+	 * 
+	 * Allows an administrator to make a plan editable or not
+	 */
+	public void changeEditable(Template temp, boolean edit, Account admin) throws IllegalArgumentException
 	{
 		if(admin.isAdmin())
 		{
 			temp.setEditable(edit);
 		}
+		else
+		{
+			throw new IllegalArgumentException("You are not an Administrator");
+			
+		}
+		
 	}
 }
