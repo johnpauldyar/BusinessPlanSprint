@@ -1,10 +1,17 @@
 package software_masters.business_planner;
 
-public class Account {
+import java.io.Serializable;
+
+public class Account implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8022211860631546060L;
 	public String name;
 	private String password;
 	public Department dept;
 	public boolean bAdmin;//determines if the client can call addUser() and CanEdit()
+	
 	
 	/**
 	 * @param name

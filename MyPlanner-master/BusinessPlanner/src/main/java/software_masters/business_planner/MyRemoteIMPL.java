@@ -1,6 +1,4 @@
 package software_masters.business_planner;
-import java.rmi.Naming;
-import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -25,11 +23,6 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		super();
 	}
 	
-	public String sayHello() throws RemoteException
-	{
-		return "hello";
-	}
-	
 	public static void main(String [] args) throws RemoteException
 	{
 		try
@@ -49,11 +42,22 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	private ArrayList<Account> accountList;
 	
 	
-	public ArrayList<Account> getAccountList() {
-		return accountList;
+	public ArrayList<Account> getAccountList() throws RemoteException 
+	{
+		try 
+		{
+			return accountList;
+		}
+		catch (Exception ex)
+		{
+			System.out.println(ex);
+			
+		}
+		return null;
 	}
 
-	public void setAccountList(ArrayList<Account> accountList) {
+	public void setAccountList(ArrayList<Account> accountList) throws RemoteException
+	{
 		this.accountList = accountList;
 	}
 
@@ -150,13 +154,13 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 * 
 	 * adds a new account in the department of the administrator adding the account
 	 */
-	public void addAccount(Account admin, String name, String password, boolean isAdmin) throws IllegalArgumentException
+	public void addAccount(String name, String password, boolean isAdmin, Account admin) throws IllegalArgumentException
 	{
 		if(admin.isAdmin())
 		{
 			Department dept=admin.getDept();
 			Account acc=new Account(name, password, dept, isAdmin);
-			userList.add(acc);
+			accountList.add(acc);
 		}
 		else
 		{
@@ -186,4 +190,16 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		}
 		
 	}
+	
+	public void login(String username, String password)
+	{
+		
+	}
+	
+	public void hello()
+	{
+		System.out.println("Works on Server");
+		
+	}
+	
 }

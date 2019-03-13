@@ -1,9 +1,12 @@
 package software_masters.business_planner;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Department
+public class Department implements Serializable
 {
+
+	private static final long serialVersionUID = -850551282099065281L;
 	private Template model;
 	private ArrayList<Template> oldTemplates;
 	

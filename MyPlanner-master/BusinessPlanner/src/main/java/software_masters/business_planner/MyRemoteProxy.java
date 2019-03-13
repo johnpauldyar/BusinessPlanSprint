@@ -6,60 +6,56 @@ import java.util.ArrayList;
 public class MyRemoteProxy implements MyRemote {
 
 	private MyRemoteIMPL server;
-	private Account myAccount;
 	
-	public MyRemoteProxy(MyRemoteIMPL server)
+	public MyRemoteProxy(MyRemoteIMPL server) throws RemoteException
 	{
 		this.server=server;
 	}
 	
-	public void login(String username, String password)
-	{
-		ArrayList<Account> users = server.getAccountList();
-		for (int i =0; i< users.size(); i++)
-		{
-			if (users.get(i).getName()==username)
-			{
-				if (users.get(i).getPassword() == password)
-				{
-					myAccount = users.get(i);
-				}
-			}
-		}	
-	}
-	
-	public Template getPlan(int year) throws IllegalArgumentException
+	public Template getPlan(int year, Account myAccount) throws IllegalArgumentException, RemoteException
 	{
 		return server.getPlan(year, myAccount);
 	}
 	
-	public void replacePlan(Template newTemp, int year) throws IllegalArgumentException
+	public void replacePlan(Template newTemp, int year, Account myAccount) throws IllegalArgumentException, RemoteException
 	{
 		server.replacePlan(newTemp,year,myAccount);
 	}
 	
-	public void makePlan(String templateName)
+	public void makePlan(String templateName, Account myAccount)  throws RemoteException
 	{
 		server.makePlan(templateName, myAccount);
 	}
 	
-	public void makePlan(int year, String templateName)
+	public void makePlan(int year, String templateName, Account myAccount) throws RemoteException
 	{
 		server.makePlan(year, templateName, myAccount);
 	}
 	
-	public void addAccount(Account admin, String name, String password, boolean isAdmin) throws IllegalArgumentException
+	public void addAccount(String name, String password, boolean isAdmin, Account admin) throws IllegalArgumentException, RemoteException
 	{
-		server.addAccount(admin, name, password, isAdmin);
+		server.addAccount(name, password, isAdmin, admin);
 	}
 	
-	public void changeEditable(Template temp, boolean edit, Account admin) throws IllegalArgumentException
+	public void changeEditable(Template temp, boolean edit, Account admin) throws IllegalArgumentException, RemoteException
 	{
 		server.changeEditable(temp, edit, admin);
 	}
-	public String sayHello() throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+	
+
+	public ArrayList<Account> getAccountList() throws RemoteException {
+		return server.getAccountList();
 	}
+
+	public void setAccountList(ArrayList<Account> accountList) throws RemoteException{
+		server.setAccountList(accountList);
+	}
+	
+	public void hello() throws RemoteException
+	{
+		System.out.println("Works on proxy");
+		server.hello();
+	}
+	
 
 }
