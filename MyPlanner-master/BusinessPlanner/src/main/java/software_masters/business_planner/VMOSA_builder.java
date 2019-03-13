@@ -45,7 +45,7 @@ public class VMOSA_builder
 		Objective.setParent(Mission);
 		Mission.setParent(Vision);
 
-		return new Template("VMOSA", null, Vision,2019,false);
+		return new Template("VMOSA", null, Vision,2019,true);
 	}
 
 	public static void main(String[] args)

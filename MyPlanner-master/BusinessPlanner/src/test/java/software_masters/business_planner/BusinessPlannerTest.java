@@ -26,8 +26,7 @@ public class BusinessPlannerTest extends TestCase
 		// this method loads template from xml
 		planner.chooseTemplate("VMOSA", "myVMOSA");
 
-		// tests adding an extra vision. should return null
-		Assert.assertNull(planner.getCurrent().deepCopy());
+
 
 		// tests removing mission
 		Assert.assertFalse(planner.getCurrent().removeChild(planner.getCurrent().getChild(0)));
@@ -63,8 +62,7 @@ public class BusinessPlannerTest extends TestCase
 		// this method loads template from xml
 		planner.chooseTemplate("Centre_Assessment", "myCentre_Assessment");
 
-		// tests adding an extra college mission statement. should return null
-		Assert.assertNull(planner.getCurrent().deepCopy());
+
 
 		// tests removing department mission statement
 		Assert.assertFalse(planner.getCurrent().removeChild(planner.getCurrent().getChild(0)));
@@ -99,8 +97,7 @@ public class BusinessPlannerTest extends TestCase
 		// this method loads template from xml
 		planner.chooseTemplate("OKR", "myOKR");
 
-		// tests adding an extra vision. should return null
-		Assert.assertNull(planner.getCurrent().deepCopy());
+
 
 		// tests removing mission
 		Assert.assertFalse(planner.getCurrent().removeChild(planner.getCurrent().getChild(0)));

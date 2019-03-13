@@ -4,6 +4,9 @@
   <void property="developerTemplateName">
    <string>VMOSA</string>
   </void>
+  <void property="editable">
+   <boolean>true</boolean>
+  </void>
   <void property="root">
    <object class="software_masters.business_planner.TemplateSection" id="TemplateSection0">
     <void property="canCopy">

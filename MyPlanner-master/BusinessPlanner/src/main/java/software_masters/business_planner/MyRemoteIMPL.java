@@ -1,14 +1,18 @@
 package software_masters.business_planner;
-import java.beans.XMLEncoder;
-import java.io.BufferedOutputStream;
+import java.beans.XMLDecoder;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.*;
 
+/**
+ * @author john.dyar
+ *
+ */
 /**
  * @author john.dyar
  *
@@ -20,49 +24,57 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 * 
 	 */
 	private static final long serialVersionUID = -2479310677814285137L;
-	private ArrayList<Account> accountList;
+	private AccountList accountList;
+
 
 	public MyRemoteIMPL() throws RemoteException
 	{
 		super();
 	}
 	
+	public void setAccounts(AccountList accountList) throws RemoteException
+	{
+		this.accountList=accountList;
+	}
+	
+
+	
+	public void load() throws RemoteException
+	{
+		try
+		{
+		setAccounts(accountLoad());
+		}
+		catch(Exception ex)
+		{
+			System.out.println(ex);
+		}
+	}
+	
 	public Account getAccount(String username,String password) throws IllegalArgumentException,RemoteException
 	{
-		for(Account x:accountList)
+		for(Account x:accountList.getAccounts())
 		{
-			if(x.getName().equals(username)&&x.getPassword().equals(password));
+			if(x.getName().equals(username))
 			{
-				return x;
+					if( x.getPassword().equals(password))
+					{
+						return x;
+					}
 			}
 		}
 		throw new IllegalArgumentException();
 	}
 	
-	public static void main(String [] args) throws RemoteException
-	{
-		try
-		{
-			MyRemote service = new MyRemoteIMPL();
-			//MyRemote stub = (MyRemote) UnicastRemoteObject.exportObject(service,0);
-			Registry registry = LocateRegistry.getRegistry();
-			registry.rebind("RemoteHello",service);
-		}
-		catch(Exception ex)
-		{
-			System.out.println("Error in connecting to registry");
-			System.out.println(ex);
-		}
-	}
 	
 	
 	
-	
+
 	public ArrayList<Account> getAccountList() throws RemoteException 
 	{
 		try 
 		{
-			return accountList;
+			return accountList.getAccounts();
 		}
 		catch (Exception ex)
 		{
@@ -70,11 +82,6 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			
 		}
 		return null;
-	}
-
-	public void setAccountList(ArrayList<Account> accountList) throws RemoteException
-	{
-		this.accountList = accountList;
 	}
 
 	/**
@@ -85,7 +92,9 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 */
 	public Template getPlan(int year,Account myAccount) throws IllegalArgumentException
 	{
-		ArrayList<Template> temps = myAccount.getDept().getOldTemplates();
+		try
+		{
+		ArrayList<Template> temps = getAccount(myAccount.getName(),myAccount.getPassword()).getDept().getOldTemplates();
 		for(Template x:temps)
 		{
 			if(x.getYear()==year)
@@ -94,6 +103,12 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			}
 		}
 		throw new IllegalArgumentException("Template with year not on record.");
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
+		return null;
 	}
 
 	/**
@@ -120,15 +135,19 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		{
 			throw new IllegalArgumentException("Template with year not on record.");
 		}
+		if(year!=newTemp.getYear())
+		{
+			newTemp.setYear(year);
+		}
 		if (temps.get(index).isEditable())
 		{
-			temps.set(index, newTemp);
+			myAccount.getDept().getOldTemplates().set(index, newTemp);
 		}
 		else
 		{
 			throw new IllegalArgumentException("This plan is not editable.");
 		}
-		save();
+		accountList.save();
 
 	}
 	
@@ -141,11 +160,18 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 */
 	public void makePlan(String templateName,Account myAccount)
 	{
-		Calendar cal=Calendar.getInstance();
-		cal.setTime(new Date());
-		int year=cal.get(Calendar.DAY_OF_YEAR);
-		makePlan(year, templateName, myAccount);
-		save();
+		try
+		{
+		Template model=myAccount.getDept().getModel();
+		TemplateSection root=model.getRoot().deepCopy();
+		Template newTemp=new Template(model.getDeveloperTemplateName(), templateName, root, 2019, true);
+		this.getAccount(myAccount.getName(),myAccount.getPassword()).getDept().addNewTemplate(newTemp);
+		accountList.save();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 	
 	/**
@@ -157,11 +183,18 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 */
 	public void makePlan(int year, String templateName, Account myAccount)
 	{
-		Template model=myAccount.getDept().getModel();
-		TemplateSection root=model.getRoot().deepCopy();
-		Template newTemp=new Template(model.getDeveloperTemplateName(), templateName, root, year, true);
-		myAccount.getDept().addNewTemplate(newTemp);
-		save();
+		try
+		{
+		Template newtemp=this.getPlan(year, myAccount);
+		TemplateSection root=newtemp.getRoot().deepCopy();
+		Template returned=new Template(newtemp.getUserTemplateName(),templateName,root,year,true);
+		this.getAccount(myAccount.getName(),myAccount.getPassword()).getDept().addNewTemplate(returned);
+		accountList.save();
+		}
+		catch (Exception e)
+		{
+			System.out.println(e);
+		}
 	}
 	
 	/**
@@ -179,27 +212,32 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		{
 			Department dept=admin.getDept();
 			Account acc=new Account(name, password, dept, isAdmin);
-			accountList.add(acc);
+			accountList.getAccounts().add(acc);
 		}
 		else
 		{
 			throw new IllegalArgumentException("You are not an Administrator");
 			
 		}
-		save();
+		accountList.save();
+
 	}
+	
+	
+
 	public void addAccount(Account account, Account admin) throws IllegalArgumentException, RemoteException
 	{
 		if(admin.isAdmin())
 		{
-			accountList.add(account);
+			accountList.getAccounts().add(account);
 		}
 		else
 		{
 			throw new IllegalArgumentException("You are not an Administrator");
 			
 		}
-		save();
+		accountList.save();
+
 	}
 	
 	/**
@@ -221,27 +259,31 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			throw new IllegalArgumentException("You are not an Administrator");
 			
 		}
-		save();
+		accountList.save();
+
 		
 	}
 	
-	public void login(String username, String password)
+	/**
+	 * A private helper method that loads from an XML file
+	 * @return AccountList account
+	 */
+	private static AccountList accountLoad()
 	{
-		
-	}
-	
-	public void save()
-	{
-		String filename="ServerXMLFile";
-		XMLEncoder encoder = null;
+		XMLDecoder decoder = null;
 		try
 		{
-			encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(filename)));
-		} catch (FileNotFoundException fileNotFound)
+			decoder = new XMLDecoder(new BufferedInputStream(new FileInputStream("AccountXMLFile")));
+		} catch (Exception e)
 		{
-			System.out.println("ERROR: While Creating or Opening the File " + filename);
+			System.out.println(e);
 		}
-		encoder.writeObject(accountList);
-		encoder.close();
+		AccountList accounts=new AccountList((ArrayList<Account>) decoder.readObject());
+		return accounts;
+		
 	}
+	
+	
+
+	
 }

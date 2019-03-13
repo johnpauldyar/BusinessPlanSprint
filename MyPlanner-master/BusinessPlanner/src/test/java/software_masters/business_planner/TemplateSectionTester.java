@@ -86,8 +86,6 @@ public class TemplateSectionTester extends TestCase
 		ts2.addChild(ts3);
 		ts3.setParent(ts2);
 
-		// Tries to clone Vision, shouldn't work
-		Assert.assertNull(ts1.deepCopy());
 
 		// Tries to clone Objectives, should work
 		TemplateSection ts4 = ts3.deepCopy();

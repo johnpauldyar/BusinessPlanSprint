@@ -48,7 +48,7 @@ public class OKR
 		longTermGoals.setParent(Mission);
 		Mission.setParent(Vision);
 
-		return new Template("OKR", null, Vision, 2019, false);
+		return new Template("OKR", null, Vision, 2019, true);
 	}
 
 	public static void main(String[] args)

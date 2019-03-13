@@ -1,5 +1,7 @@
 package software_masters.business_planner;
 
+import java.io.Serializable;
+
 /**
  * This class represents a content section that is all text
  * 
@@ -8,9 +10,13 @@ package software_masters.business_planner;
  * @since 2019-02-23
  */
 
-public class Text implements Content
+public class Text implements Content, Serializable 
 {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7279225432515499795L;
 	private String textString;
 
 	/**

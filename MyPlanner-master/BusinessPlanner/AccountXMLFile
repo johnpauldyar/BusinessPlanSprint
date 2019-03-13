@@ -1,0 +1,1272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_181" class="java.beans.XMLDecoder">
+ <object class="java.util.ArrayList">
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account0">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account0"/>
+      <string>admin</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account0"/>
+      <object class="software_masters.business_planner.Department" id="Department0">
+       <void property="model">
+        <object class="software_masters.business_planner.Template">
+         <void property="developerTemplateName">
+          <string>VMOSA</string>
+         </void>
+         <void property="editable">
+          <boolean>true</boolean>
+         </void>
+         <void property="root">
+          <object class="software_masters.business_planner.TemplateSection" id="TemplateSection0">
+           <void property="canCopy">
+            <boolean>false</boolean>
+           </void>
+           <void property="category">
+            <string>Vision</string>
+           </void>
+           <void property="children">
+            <void method="add">
+             <object class="software_masters.business_planner.TemplateSection" id="TemplateSection1">
+              <void property="canCopy">
+               <boolean>false</boolean>
+              </void>
+              <void property="category">
+               <string>Mission</string>
+              </void>
+              <void property="children">
+               <void method="add">
+                <object class="software_masters.business_planner.TemplateSection" id="TemplateSection2">
+                 <void property="category">
+                  <string>Objectives</string>
+                 </void>
+                 <void property="children">
+                  <void method="add">
+                   <object class="software_masters.business_planner.TemplateSection" id="TemplateSection3">
+                    <void property="category">
+                     <string>Strategies</string>
+                    </void>
+                    <void property="children">
+                     <void method="add">
+                      <object class="software_masters.business_planner.TemplateSection" id="TemplateSection4">
+                       <void property="category">
+                        <string>Action Plans</string>
+                       </void>
+                       <void property="contents">
+                        <void method="add">
+                         <object class="software_masters.business_planner.Text"/>
+                        </void>
+                       </void>
+                       <void property="parent">
+                        <object idref="TemplateSection3"/>
+                       </void>
+                      </object>
+                     </void>
+                    </void>
+                    <void property="contents">
+                     <void method="add">
+                      <object class="software_masters.business_planner.Text"/>
+                     </void>
+                    </void>
+                    <void property="parent">
+                     <object idref="TemplateSection2"/>
+                    </void>
+                   </object>
+                  </void>
+                 </void>
+                 <void property="contents">
+                  <void method="add">
+                   <object class="software_masters.business_planner.Text"/>
+                  </void>
+                 </void>
+                 <void property="parent">
+                  <object idref="TemplateSection1"/>
+                 </void>
+                </object>
+               </void>
+              </void>
+              <void property="contents">
+               <void method="add">
+                <object class="software_masters.business_planner.Text"/>
+               </void>
+              </void>
+              <void property="name">
+               <string>Mission</string>
+              </void>
+              <void property="parent">
+               <object idref="TemplateSection0"/>
+              </void>
+             </object>
+            </void>
+           </void>
+           <void property="contents">
+            <void method="add">
+             <object class="software_masters.business_planner.Text"/>
+            </void>
+           </void>
+           <void property="name">
+            <string>Vision</string>
+           </void>
+          </object>
+         </void>
+         <void property="year">
+          <int>2019</int>
+         </void>
+        </object>
+       </void>
+       <void property="oldTemplates">
+        <object class="java.util.ArrayList">
+         <void method="add">
+          <object class="software_masters.business_planner.Template" id="Template0">
+           <void property="developerTemplateName">
+            <string>VMOSA</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection5">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>Vision</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection6">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection7">
+                   <void property="category">
+                    <string>Objectives</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection8">
+                      <void property="category">
+                       <string>Strategies</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection9">
+                         <void property="category">
+                          <string>Action Plans</string>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection8"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection7"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection6"/>
+                   </void>
+                  </object>
+                 </void>
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection10">
+                   <void property="category">
+                    <string>Objectives</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection11">
+                      <void property="category">
+                       <string>Strategies</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection12">
+                         <void property="category">
+                          <string>Action Plans</string>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection11"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection10"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection6"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection5"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>Vision</string>
+             </void>
+            </object>
+           </void>
+           <void property="userTemplateName">
+            <string>MyBusinessPlan</string>
+           </void>
+           <void property="year">
+            <int>3</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template">
+           <void property="developerTemplateName">
+            <string>OKR</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection13">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>Vision</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection14">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection15">
+                   <void property="category">
+                    <string>Long Term Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection16">
+                      <void property="category">
+                       <string>Short Term Goals</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection17">
+                         <void property="category">
+                          <string>Objectives</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection18">
+                            <void property="category">
+                             <string>Key Results</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection17"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection16"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection15"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection14"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection13"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>Vision</string>
+             </void>
+            </object>
+           </void>
+           <void property="year">
+            <int>2</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template">
+           <void property="developerTemplateName">
+            <string>Centre_Assessment</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection19">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>College Mission</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection20">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Program Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection21">
+                   <void property="category">
+                    <string>Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection22">
+                      <void property="category">
+                       <string>Student Learning Objectives</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection23">
+                         <void property="category">
+                          <string>Tools</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection24">
+                            <void property="category">
+                             <string>Targets</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection23"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection22"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection21"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection20"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Program Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection19"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>College Mission</string>
+             </void>
+            </object>
+           </void>
+           <void property="year">
+            <int>3</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template" id="Template1">
+           <void property="developerTemplateName">
+            <string>Centre_Assessment</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection25">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>College Mission</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection26">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Program Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection27">
+                   <void property="category">
+                    <string>Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection28">
+                      <void property="category">
+                       <string>Student Learning Objectives</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection29">
+                         <void property="category">
+                          <string>Tools</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection30">
+                            <void property="category">
+                             <string>Targets</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection29"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection28"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection27"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection26"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Program Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection25"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>College Mission</string>
+             </void>
+            </object>
+           </void>
+           <void property="year">
+            <int>4</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template">
+           <void property="developerTemplateName">
+            <string>Centre_Assessment</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection31">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>College Mission</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection32">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Program Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection33">
+                   <void property="category">
+                    <string>Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection34">
+                      <void property="category">
+                       <string>Student Learning Objectives</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection35">
+                         <void property="category">
+                          <string>Tools</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection36">
+                            <void property="category">
+                             <string>Targets</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection35"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection34"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection33"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection32"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Program Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection31"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>College Mission</string>
+             </void>
+            </object>
+           </void>
+           <void property="year">
+            <int>2018</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template" id="Template2">
+           <void property="developerTemplateName">
+            <string>OKR</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection37">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>Vision</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection38">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection39">
+                   <void property="category">
+                    <string>Long Term Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection40">
+                      <void property="category">
+                       <string>Short Term Goals</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection41">
+                         <void property="category">
+                          <string>Objectives</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection42">
+                            <void property="category">
+                             <string>Key Results</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection41"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection40"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection39"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection38"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection37"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>Vision</string>
+             </void>
+            </object>
+           </void>
+           <void property="year">
+            <int>6</int>
+           </void>
+          </object>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template">
+           <void property="developerTemplateName">
+            <string>VMOSA</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection43">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>Vision</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection44">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection45">
+                   <void property="category">
+                    <string>Objectives</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection46">
+                      <void property="category">
+                       <string>Strategies</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection47">
+                         <void property="category">
+                          <string>Action Plans</string>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection46"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection45"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection44"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection43"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>Vision</string>
+             </void>
+            </object>
+           </void>
+           <void property="userTemplateName">
+            <string>testing Template</string>
+           </void>
+           <void property="year">
+            <int>2019</int>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>bAdmin</string>
+     <void method="set">
+      <object idref="Account0"/>
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void property="password">
+     <string>you shall not x - word</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account1">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account1"/>
+      <string>admin2</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account1"/>
+      <object class="software_masters.business_planner.Department" id="Department1">
+       <void property="model">
+        <object idref="Template2"/>
+       </void>
+       <void property="oldTemplates">
+        <object class="java.util.ArrayList">
+         <void method="add">
+          <object idref="Template0"/>
+         </void>
+         <void method="add">
+          <object idref="Template1"/>
+         </void>
+         <void method="add">
+          <object class="software_masters.business_planner.Template">
+           <void property="developerTemplateName">
+            <string>OKR</string>
+           </void>
+           <void property="editable">
+            <boolean>true</boolean>
+           </void>
+           <void property="root">
+            <object class="software_masters.business_planner.TemplateSection" id="TemplateSection48">
+             <void property="canCopy">
+              <boolean>false</boolean>
+             </void>
+             <void property="category">
+              <string>Vision</string>
+             </void>
+             <void property="children">
+              <void method="add">
+               <object class="software_masters.business_planner.TemplateSection" id="TemplateSection49">
+                <void property="canCopy">
+                 <boolean>false</boolean>
+                </void>
+                <void property="category">
+                 <string>Mission</string>
+                </void>
+                <void property="children">
+                 <void method="add">
+                  <object class="software_masters.business_planner.TemplateSection" id="TemplateSection50">
+                   <void property="category">
+                    <string>Long Term Goals</string>
+                   </void>
+                   <void property="children">
+                    <void method="add">
+                     <object class="software_masters.business_planner.TemplateSection" id="TemplateSection51">
+                      <void property="category">
+                       <string>Short Term Goals</string>
+                      </void>
+                      <void property="children">
+                       <void method="add">
+                        <object class="software_masters.business_planner.TemplateSection" id="TemplateSection52">
+                         <void property="category">
+                          <string>Objectives</string>
+                         </void>
+                         <void property="children">
+                          <void method="add">
+                           <object class="software_masters.business_planner.TemplateSection" id="TemplateSection53">
+                            <void property="category">
+                             <string>Key Results</string>
+                            </void>
+                            <void property="contents">
+                             <void method="add">
+                              <object class="software_masters.business_planner.Text"/>
+                             </void>
+                            </void>
+                            <void property="parent">
+                             <object idref="TemplateSection52"/>
+                            </void>
+                           </object>
+                          </void>
+                         </void>
+                         <void property="contents">
+                          <void method="add">
+                           <object class="software_masters.business_planner.Text"/>
+                          </void>
+                         </void>
+                         <void property="parent">
+                          <object idref="TemplateSection51"/>
+                         </void>
+                        </object>
+                       </void>
+                      </void>
+                      <void property="contents">
+                       <void method="add">
+                        <object class="software_masters.business_planner.Text"/>
+                       </void>
+                      </void>
+                      <void property="parent">
+                       <object idref="TemplateSection50"/>
+                      </void>
+                     </object>
+                    </void>
+                   </void>
+                   <void property="contents">
+                    <void method="add">
+                     <object class="software_masters.business_planner.Text"/>
+                    </void>
+                   </void>
+                   <void property="parent">
+                    <object idref="TemplateSection49"/>
+                   </void>
+                  </object>
+                 </void>
+                </void>
+                <void property="contents">
+                 <void method="add">
+                  <object class="software_masters.business_planner.Text"/>
+                 </void>
+                </void>
+                <void property="name">
+                 <string>Mission</string>
+                </void>
+                <void property="parent">
+                 <object idref="TemplateSection48"/>
+                </void>
+               </object>
+              </void>
+             </void>
+             <void property="contents">
+              <void method="add">
+               <object class="software_masters.business_planner.Text"/>
+              </void>
+             </void>
+             <void property="name">
+              <string>Vision</string>
+             </void>
+            </object>
+           </void>
+           <void property="userTemplateName">
+            <string>d2Plan</string>
+           </void>
+           <void property="year">
+            <int>2019</int>
+           </void>
+          </object>
+         </void>
+        </object>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>bAdmin</string>
+     <void method="set">
+      <object idref="Account1"/>
+      <boolean>true</boolean>
+     </void>
+    </void>
+    <void property="password">
+     <string>hihocherrio</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account2">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account2"/>
+      <string>one</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account2"/>
+      <object idref="Department0"/>
+     </void>
+    </void>
+    <void property="password">
+     <string>password</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account3">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account3"/>
+      <string>three</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account3"/>
+      <object idref="Department1"/>
+     </void>
+    </void>
+    <void property="password">
+     <string>pas</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account4">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account4"/>
+      <string>two</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account4"/>
+      <object idref="Department0"/>
+     </void>
+    </void>
+    <void property="password">
+     <string>passcode</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="software_masters.business_planner.Account" id="Account5">
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>name</string>
+     <void method="set">
+      <object idref="Account5"/>
+      <string>two</string>
+     </void>
+    </void>
+    <void class="software_masters.business_planner.Account" method="getField">
+     <string>dept</string>
+     <void method="set">
+      <object idref="Account5"/>
+      <object idref="Department0"/>
+     </void>
+    </void>
+    <void property="password">
+     <string>passcode</string>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object idref="Account3"/>
+  </void>
+ </object>
+</java>
