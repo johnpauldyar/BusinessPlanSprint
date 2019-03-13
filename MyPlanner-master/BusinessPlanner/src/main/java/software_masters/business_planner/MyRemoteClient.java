@@ -9,12 +9,6 @@ public class MyRemoteClient
 	MyRemote stub;
 	Account myAccount;
 	
-	public static void main(String [] args) throws RemoteException
-	{
-		MyRemoteClient helper = new MyRemoteClient();
-		helper.stub.hello();
-		
-	}
 	public MyRemoteClient()
 	{
 		try {

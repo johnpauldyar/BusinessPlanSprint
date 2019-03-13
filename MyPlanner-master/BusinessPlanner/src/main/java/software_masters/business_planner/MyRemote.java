@@ -20,9 +20,9 @@ public interface MyRemote extends Remote {
 	
 	public void addAccount(String name, String password, boolean isAdmin, Account admin) throws IllegalArgumentException, RemoteException;
 	
+	public void addAccount(Account account, Account admin) throws IllegalArgumentException, RemoteException;
+	
 	public void changeEditable(Template temp, boolean edit, Account admin) throws IllegalArgumentException,RemoteException;
 	
-	public void hello() throws RemoteException;
-	
-	
+	public Account getAccount(String username,String password) throws IllegalArgumentException,RemoteException;
 }

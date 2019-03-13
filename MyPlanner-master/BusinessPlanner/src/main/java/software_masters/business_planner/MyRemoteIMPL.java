@@ -1,4 +1,8 @@
 package software_masters.business_planner;
+import java.beans.XMLEncoder;
+import java.io.BufferedOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -16,11 +20,23 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 	 * 
 	 */
 	private static final long serialVersionUID = -2479310677814285137L;
-
+	private ArrayList<Account> accountList;
 
 	public MyRemoteIMPL() throws RemoteException
 	{
 		super();
+	}
+	
+	public Account getAccount(String username,String password) throws IllegalArgumentException,RemoteException
+	{
+		for(Account x:accountList)
+		{
+			if(x.getName().equals(username)&&x.getPassword().equals(password));
+			{
+				return x;
+			}
+		}
+		throw new IllegalArgumentException();
 	}
 	
 	public static void main(String [] args) throws RemoteException
@@ -39,7 +55,7 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		}
 	}
 	
-	private ArrayList<Account> accountList;
+	
 	
 	
 	public ArrayList<Account> getAccountList() throws RemoteException 
@@ -112,6 +128,7 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		{
 			throw new IllegalArgumentException("This plan is not editable.");
 		}
+		save();
 
 	}
 	
@@ -128,6 +145,7 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		cal.setTime(new Date());
 		int year=cal.get(Calendar.DAY_OF_YEAR);
 		makePlan(year, templateName, myAccount);
+		save();
 	}
 	
 	/**
@@ -143,6 +161,7 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		TemplateSection root=model.getRoot().deepCopy();
 		Template newTemp=new Template(model.getDeveloperTemplateName(), templateName, root, year, true);
 		myAccount.getDept().addNewTemplate(newTemp);
+		save();
 	}
 	
 	/**
@@ -167,6 +186,20 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			throw new IllegalArgumentException("You are not an Administrator");
 			
 		}
+		save();
+	}
+	public void addAccount(Account account, Account admin) throws IllegalArgumentException, RemoteException
+	{
+		if(admin.isAdmin())
+		{
+			accountList.add(account);
+		}
+		else
+		{
+			throw new IllegalArgumentException("You are not an Administrator");
+			
+		}
+		save();
 	}
 	
 	/**
@@ -188,6 +221,7 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 			throw new IllegalArgumentException("You are not an Administrator");
 			
 		}
+		save();
 		
 	}
 	
@@ -196,10 +230,18 @@ public class MyRemoteIMPL extends UnicastRemoteObject implements MyRemote
 		
 	}
 	
-	public void hello()
+	public void save()
 	{
-		System.out.println("Works on Server");
-		
+		String filename="ServerXMLFile";
+		XMLEncoder encoder = null;
+		try
+		{
+			encoder = new XMLEncoder(new BufferedOutputStream(new FileOutputStream(filename)));
+		} catch (FileNotFoundException fileNotFound)
+		{
+			System.out.println("ERROR: While Creating or Opening the File " + filename);
+		}
+		encoder.writeObject(accountList);
+		encoder.close();
 	}
-	
 }
